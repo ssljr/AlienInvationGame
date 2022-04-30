@@ -1,6 +1,7 @@
 import pygame
 import sys
 from setting import Setting
+from ship import Ship
 
 
 def run_game():
@@ -11,6 +12,9 @@ def run_game():
     screen = pygame.display.set_mode((set.screen_width, set.screen_height))
     pygame.display.set_caption('*** 外星风暴 ***')
 
+    # 创建飞船
+    ship = Ship(screen)
+
     # 设置背景颜色
     bg_color = set.bg_color
     # 开始游戏的主循环
@@ -20,8 +24,9 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
 
-        # 让最近绘制的屏幕可见
         screen.fill(bg_color)
+        ship.blitme()
+        # 让最近绘制的屏幕可见
         pygame.display.flip()
 
 
