@@ -15,12 +15,15 @@ def run_game():
     # 创建飞船
     ship = Ship(screen)
 
+    # 水平移动的敏捷度
+    centerx_sensitive = 2
     # 设置背景颜色
     bg_color = setting.bg_color
     # 开始游戏的主循环
     while True:
         # 监视键盘和鼠标事件
-        gf.check_events()
+        gf.check_events(ship)
+        ship.update(centerx_sensitive)
         gf.update_screen(setting, screen, ship)
 
 
