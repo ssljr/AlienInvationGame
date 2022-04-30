@@ -21,11 +21,7 @@ def run_game():
     while True:
         # 监视键盘和鼠标事件
         gf.check_events()
-
-        screen.fill(bg_color)
-        ship.blitme()
-        # 让最近绘制的屏幕可见
-        pygame.display.flip()
+        gf.update_screen(setting, screen, ship)
 
 
 run_game()
