@@ -1,22 +1,21 @@
 import pygame
-import sys
+import game_function as  gf
 from setting import Setting
 from ship import Ship
-
 
 def run_game():
     # 初始化游戏并创建一个屏幕对象
     pygame.init()
 
-    set = Setting()
-    screen = pygame.display.set_mode((set.screen_width, set.screen_height))
+    setting = Setting()
+    screen = pygame.display.set_mode((setting.screen_width, setting.screen_height))
     pygame.display.set_caption('*** 外星风暴 ***')
 
     # 创建飞船
     ship = Ship(screen)
 
     # 设置背景颜色
-    bg_color = set.bg_color
+    bg_color = setting.bg_color
     # 开始游戏的主循环
     while True:
         # 监视键盘和鼠标事件
