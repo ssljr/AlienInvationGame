@@ -7,3 +7,13 @@ class Setting:
         self.screen_width = 1200
         self.screen_height = 800
         self.bg_color = (255, 255, 255)
+        # 初始左右移动化速度
+        self.ship_center_speed = 1.5
+
+        """初始化子弹信息"""
+        # 初始化子弹速度
+        self.bullet_speed = 1
+        # 初始化子弹像素宽度、高度、颜色
+        self.bullet_width = 5
+        self.bullet_height = 3
+        self.bullet_color = (00, 00, 00)
