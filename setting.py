@@ -13,7 +13,11 @@ class Setting:
         """初始化子弹信息"""
         # 初始化子弹速度
         self.bullet_speed = 1
-        # 初始化子弹像素宽度、高度、颜色
-        self.bullet_width = 5
-        self.bullet_height = 3
+        # 初始化子弹像素宽度、高度、颜色、屏幕上子弹数量
+        self.bullet_width = 3
+        self.bullet_height = 5
         self.bullet_color = (00, 00, 00)
+        self.bullet_allowed = 5
+
+        # 子弹连续发射
+        self.keep_shooting = False
